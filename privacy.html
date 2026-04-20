@@ -5,43 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - LegalDraftMaster</title>
     <style>
+        /* CSS Variables for easy color theme management */
+        :root {
+            --primary-color: #1e3a8a; /* Professional Deep Blue */
+            --secondary-color: #3b82f6; /* Bright Action Blue */
+            --bg-color: #f3f4f6; /* Soft Gray Background */
+            --text-color: #374151; /* Easy-to-read Dark Gray */
+            --card-bg: #ffffff;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f5f7fa;
-            color: #1a1a2e;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
         }
+
+        /* The New Colorful Gradient Header */
+        .header-banner {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px 20px 70px; /* Extra bottom padding for the overlap effect */
+            text-align: center;
+        }
+
+        .header-banner h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .header-banner p {
+            margin: 10px 0 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* The Elevated Content Card */
         .container {
-            background: #ffffff;
-            padding: 30px;
+            background-color: var(--card-bg);
+            max-width: 800px;
+            margin: -40px auto 40px; /* Pulls the card up over the header */
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 102, 255, 0.12);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            position: relative;
         }
-        h1 { color: #0066ff; }
-        h2 { color: #0052cc; margin-top: 30px; }
-        p { margin-bottom: 15px; }
+
+        h2 { 
+            color: var(--primary-color); 
+            margin-top: 35px; 
+            border-bottom: 2px solid #eff6ff;
+            padding-bottom: 8px;
+            font-size: 22px;
+        }
+
+        p { margin-bottom: 16px; }
+        
+        ul { 
+            margin-bottom: 20px; 
+            padding-left: 20px; 
+        }
+        
+        li { margin-bottom: 10px; }
+        
+        /* Colorful Bullet Points */
+        li::marker { 
+            color: var(--secondary-color); 
+            font-size: 1.2em;
+        }
+
+        a { 
+            color: var(--secondary-color); 
+            text-decoration: none; 
+            font-weight: 600; 
+        }
+        
+        a:hover { 
+            text-decoration: underline; 
+            color: var(--primary-color); 
+        }
+
+        /* Highlighted Contact Box */
+        .contact-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 25px;
+        }
+
+        .contact-box p {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                margin: -30px 15px 30px;
+                padding: 25px 20px;
+            }
+            .header-banner {
+                padding: 40px 15px 60px;
+            }
+            .header-banner h1 { font-size: 26px; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="header-banner">
         <h1>Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> April 2026</p>
-        
-        <p><strong>Maniyar Enterprises</strong> ("we", "our", or "us") operates the LegalDraftMaster application.</p>
-        
-        <h2>1. Offline Operation</h2>
-        <p>This app operates fully offline. We do not upload, collect, or store your legal drafts, documents, keystrokes, or personal data on any servers.</p>
-        
-        <h2>2. Device ID and Activation</h2>
-        <p>A secure Device ID is generated locally on your device to manage your Pro Activation Key. This identifier is used solely for license verification and is not tied to your personal identity or personal data.</p>
-        
-        <h2>3. Contact Us</h2>
-        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-        <p><strong>Contact:</strong> Imran Maniyar<br>
-        <strong>Email:</strong> maniyarent786@gmail.com</p>
+        <p>LegalDraftMaster</p>
     </div>
+
+    <div class="container">
+        <p><strong>Effective Date:</strong> April 21, 2026</p>
+
+        <p>Thank you for choosing to be part of our community at <strong>LegalDraftMaster</strong> ("Company", "we", "us", "our"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us.</p>
+
+        <p>This privacy notice describes how we might use your information if you download and use our mobile application, LegalDraftMaster.</p>
+
+        <h2>1. What Information Do We Collect?</h2>
+        <p><strong>Information automatically collected:</strong></p>
+        <p>We automatically collect certain information when you visit, use, or navigate the App. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as:</p>
+        <ul>
+            <li><strong>Device Data:</strong> We collect a unique, anonymized Device ID. This is required for our "Direct Provisioning" system to securely verify your 3-day trial status and manage Premium Activation Keys without requiring you to create an account or password.</li>
+            <li><strong>App Usage:</strong> We may collect anonymized diagnostic data (such as crash logs) to ensure the app functions optimally.</li>
+        </ul>
+
+        <h2>2. How Do We Use Your Information?</h2>
+        <p>We process your information for purposes based on legitimate business interests, the fulfillment of our contract with you, compliance with our legal obligations, and/or your consent. Specifically, we use the Device ID to:</p>
+        <ul>
+            <li>Determine trial eligibility.</li>
+            <li>Remotely unlock Premium features once authorized via our Admin systems.</li>
+        </ul>
+
+        <h2>3. Will Your Information Be Shared With Anyone?</h2>
+        <p>We only share information with the following third-party services that help power LegalDraftMaster:</p>
+        <ul>
+            <li><strong>Google Firebase:</strong> We use Firebase Realtime Database to securely store your Device ID and trial/premium status. Firebase utilizes strict security rules and encrypted connections to keep your data safe.</li>
+            <li><strong>WhatsApp:</strong> If you choose to contact us for Premium Activation or support, the app will route you to WhatsApp. Any information you share during that chat is subject to WhatsApp's Privacy Policy.</li>
+        </ul>
+        <p>We do <strong>not</strong> sell, rent, or trade your information with any third parties for promotional purposes.</p>
+
+        <h2>4. Is Your Information Safe?</h2>
+        <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. Our database is secured with strict cryptographic rules that prevent unauthorized public access or tampering. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.</p>
+
+        <h2>5. Do We Collect Information From Minors?</h2>
+        <p>We do not knowingly solicit data from or market to children under 18 years of age. By using the App, you represent that you are at least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the App.</p>
+
+        <h2>6. Updates to This Notice</h2>
+        <p>We may update this privacy notice from time to time. The updated version will be indicated by an updated "Effective Date" and the updated version will be effective as soon as it is accessible.</p>
+
+        <h2>7. How Can You Contact Us About This Notice?</h2>
+        <div class="contact-box">
+            <p>If you have questions or comments about this notice, you may contact us at:<br>
+            <strong>Imran Maniyar</strong><br>
+            <strong><a href="mailto:maniyarent786@gmail.com">maniyarent786@gmail.com</a></strong></p>
+        </div>
+    </div>
+
 </body>
 </html>
