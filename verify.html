@@ -8,7 +8,10 @@
         .container { background: white; padding: 30px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
         h1 { color: #9E0A3F; }
         
-        .policy-box { background: #f9f9f9; padding: 15px; border-radius: 8px; font-size: 13px; color: #555; text-align: left; margin-top: 20px; border: 1px solid #ddd; height: 150px; overflow-y: scroll; }
+        .policy-box { background: #f9f9f9; border-radius: 8px; margin-top: 20px; border: 1px solid #ddd; height: 200px; overflow: hidden; }
+        
+        /* This iframe loads your existing privacy.html file automatically */
+        iframe { width: 100%; height: 100%; border: none; }
         
         .checkbox-container { margin-top: 20px; margin-bottom: 20px; text-align: left; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: bold;}
         input[type="checkbox"] { width: 22px; height: 22px; accent-color: #9E0A3F; cursor: pointer; }
@@ -25,12 +28,8 @@
         <p>Your email has been successfully secured.</p>
         
         <div class="policy-box">
-            <b>Privacy Policy and Terms of Service</b><br><br>
-            1. <b>Data Privacy:</b> We take your privacy seriously. Your data is securely stored.<br><br>
-            2. <b>No Third-Party Sharing:</b> We do not share your contact details with outside parties without your explicit consent.<br><br>
-            3. <b>Community Guidelines:</b> By using this app, you agree to treat all members with respect and maintain a genuine, authentic profile.<br><br>
-            4. <b>Account Safety:</b> You are responsible for keeping your account credentials secure. Report any suspicious activity immediately.<br><br>
-            5. <b>Match Integrity:</b> We reserve the right to remove profiles that violate community standards.
+            <!-- This points directly to the file in your repository -->
+            <iframe src="privacy.html"></iframe>
         </div>
 
         <div class="checkbox-container">
@@ -60,7 +59,8 @@
         function openApp() {
             var checkBox = document.getElementById("agreeCheck");
             if (checkBox.checked) {
-                window.location.href = "matrimonyapp://verify";
+                // Upgraded to an official Android Intent URI to bypass browser blocks
+                window.location.href = "intent://verify#Intent;scheme=matrimonyapp;package=com.community.matrimony;end;";
             }
         }
     </script>
