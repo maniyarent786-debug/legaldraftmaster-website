@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Matrimony - Verified!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #F4F4F4; color: #333; }
+        .container { background: white; padding: 30px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: #9E0A3F; }
+        
+        .policy-box { background: #f9f9f9; padding: 15px; border-radius: 8px; font-size: 13px; color: #555; text-align: left; margin-top: 20px; border: 1px solid #ddd; height: 150px; overflow-y: scroll; }
+        
+        .checkbox-container { margin-top: 20px; margin-bottom: 20px; text-align: left; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: bold;}
+        input[type="checkbox"] { width: 22px; height: 22px; accent-color: #9E0A3F; cursor: pointer; }
+        label { cursor: pointer; }
+
+        .btn { display: block; background-color: #cccccc; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; border: none; width: 100%; cursor: not-allowed; transition: 0.3s; }
+        .btn.active { background-color: #9E0A3F; cursor: pointer; box-shadow: 0px 4px 6px rgba(158, 10, 63, 0.3); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Email Verified!</h1>
+        <p>Your email has been successfully secured.</p>
+        
+        <div class="policy-box">
+            <b>Privacy Policy and Terms of Service</b><br><br>
+            1. <b>Data Privacy:</b> We take your privacy seriously. Your data is securely stored.<br><br>
+            2. <b>No Third-Party Sharing:</b> We do not share your contact details with outside parties without your explicit consent.<br><br>
+            3. <b>Community Guidelines:</b> By using this app, you agree to treat all members with respect and maintain a genuine, authentic profile.<br><br>
+            4. <b>Account Safety:</b> You are responsible for keeping your account credentials secure. Report any suspicious activity immediately.<br><br>
+            5. <b>Match Integrity:</b> We reserve the right to remove profiles that violate community standards.
+        </div>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="agreeCheck" onchange="toggleButton()">
+            <label for="agreeCheck">I agree to the Terms and Policy</label>
+        </div>
+
+        <button id="confirmBtn" class="btn" onclick="openApp()" disabled>Confirm and Open App</button>
+    </div>
+
+    <script>
+        function toggleButton() {
+            var checkBox = document.getElementById("agreeCheck");
+            var btn = document.getElementById("confirmBtn");
+            
+            if(checkBox.checked) {
+                btn.disabled = false;
+                btn.classList.add("active");
+                btn.innerText = "Confirm and Open App";
+            } else {
+                btn.disabled = true;
+                btn.classList.remove("active");
+                btn.innerText = "Please agree to continue";
+            }
+        }
+
+        function openApp() {
+            var checkBox = document.getElementById("agreeCheck");
+            if (checkBox.checked) {
+                window.location.href = "matrimonyapp://verify";
+            }
+        }
+    </script>
+</body>
+</html>
